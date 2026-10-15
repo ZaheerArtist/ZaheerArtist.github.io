@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zaheer Bijapure</title>
+<meta name="description" content="Zaheer Bijapure, AI Senior Designer at Saatchi &amp; Saatchi ME, Publicis Groupe. AI brand films, ad campaigns and key visuals, directed with ten years of Hollywood VFX experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Courier+Prime:wght@400;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one short film. Title card, four scenes, the reels, the films, the end. Teal-and-orange grade. */
+:root{
+  --void:#06090a; --deep:#0c1a1c; --edge:#1f3336; --cream:#f2e8d5; --dim:#8ea1a0; --ember:#ff7a2f;
+  --title:"Cinzel","Trajan Pro",Georgia,serif;
+  --script:"Courier Prime","Courier New",Courier,monospace;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:60px}
+body{margin:0;background:var(--void);color:var(--cream);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+p,h1,h2,h3{margin:0}
+h1,h2,h3{font-weight:600;text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--script);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ember)}
+.h2{font-family:var(--title);font-size:clamp(2rem,6vw,3.4rem);letter-spacing:.04em;line-height:1.05}
+.btn{display:inline-block;font-family:var(--script);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;padding:12px 18px;border:1px solid var(--edge);color:var(--cream);background:transparent;text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--ember);color:var(--ember)}
+.btn.hot{background:var(--ember);border-color:var(--ember);color:var(--void)}
+.btn.hot:hover{color:var(--void);filter:brightness(1.08)}
+.head{text-align:center;display:grid;gap:12px;justify-items:center;margin-bottom:40px}
+section{padding-block:clamp(72px,11vw,120px) 0}
+
+/* Nav */
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;background:linear-gradient(var(--void),transparent)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:14px}
+.mark{font-family:var(--title);font-weight:700;letter-spacing:.3em;text-decoration:none}
+.nav nav{display:flex;gap:18px;font-family:var(--script);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+.nav nav a{text-decoration:none;color:var(--dim)}
+.nav nav a:hover{color:var(--ember)}
+@media (max-width:560px){.nav nav .opt{display:none}}
+
+/* Title card */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(92vh,820px);display:grid;align-items:end;padding:0}
+.hero .plate{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.05)}
+.playing{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:calc(70px + env(safe-area-inset-top,0px));margin:0;font-family:var(--script);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);background:rgba(6,9,10,.55);padding:6px 10px}
+.playing b{color:var(--ember);font-weight:700}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,9,10,.25) 0%,rgba(6,9,10,.2) 35%,rgba(6,9,10,.75) 70%,var(--void) 98%),linear-gradient(90deg,rgba(6,9,10,.6),transparent 60%)}
+.hero .wrap{width:100%;padding-block:120px 64px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.hero h1{font-family:var(--title);font-size:clamp(2.8rem,9vw,6.6rem);line-height:.98;letter-spacing:.03em}
+.hero h1 span{display:block;color:var(--ember);font-size:.4em;letter-spacing:.45em;margin-top:.5em}
+.agency{margin-top:8px;font-family:var(--title);font-weight:700;font-size:clamp(1.35rem,3.6vw,1.9rem);letter-spacing:.06em;color:var(--cream)}
+.agency span{display:block;margin-top:2px;font-family:var(--script);font-weight:400;font-size:.62em;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+.role{margin-top:22px;font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:34ch}
+.role b{color:var(--ember);font-weight:600}
+.actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.face{width:min(240px,32vw);aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid rgba(242,232,213,.25);filter:saturate(.9)}
+@media (max-width:700px){.hero .wrap{grid-template-columns:1fr}.face{display:none}}
+
+/* Four scenes */
+.scenes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--edge)}
+.scene{padding:26px 22px 28px;border-right:1px solid var(--edge);min-width:0}
+.scene:last-child{border-right:0}
+.scene:first-child{background:linear-gradient(180deg,rgba(255,122,47,.12),transparent)}
+.scene .yr{font-family:var(--script);font-size:.78rem;color:var(--dim);letter-spacing:.1em}
+.scene h3{font-family:var(--title);font-size:1.3rem;letter-spacing:.03em;margin:10px 0 8px}
+.scene p{color:var(--dim);font-size:.95rem}
+.scene .at{display:block;margin-top:12px;font-family:var(--script);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
+@media (max-width:860px){.scenes{grid-template-columns:1fr 1fr}.scene:nth-child(2){border-right:0}.scene:nth-child(-n+2){border-bottom:1px solid var(--edge)}}
+@media (max-width:480px){.scenes{grid-template-columns:1fr}.scene{border-right:0;border-bottom:1px solid var(--edge)}}
+
+/* Laurels */
+.laurels{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 48px;margin-top:44px}
+.laurel{display:flex;align-items:center;gap:4px;color:var(--ember)}
+.laurel svg{width:34px;height:70px;flex:none}
+.laurel svg.r{transform:scaleX(-1)}
+.laurel div{text-align:center;font-family:var(--title);width:150px;color:var(--cream);line-height:1.25}
+.laurel small{display:block;font-size:.6rem;letter-spacing:.22em;color:var(--ember)}
+.laurel strong{display:block;font-size:1rem;margin:4px 0}
+.laurel em{font-style:normal;font-size:.6rem;letter-spacing:.18em;color:var(--dim)}
+
+/* Reels */
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:860px){.reels{grid-template-columns:1fr 1fr}}
+.reel{display:block;text-decoration:none;position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
+.reel img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.8);transition:transform .7s ease,filter .7s ease}
+.reel:hover img,.reel:focus-visible img{transform:scale(1.06);filter:saturate(1.1)}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,9,10,.92),transparent 60%)}
+.reel span{position:absolute;z-index:1;left:14px;right:14px;bottom:14px;display:grid;gap:4px}
+.reel b{font-family:var(--title);font-size:1.05rem;letter-spacing:.03em}
+.reel i{font-style:normal;font-family:var(--script);font-size:.72rem;letter-spacing:.16em;color:var(--ember)}
+
+/* AI films */
+.sub{color:var(--dim);max-width:52ch}
+.films{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media (max-width:640px){.films{grid-template-columns:1fr}}
+.film{display:block;text-decoration:none;background:var(--deep)}
+.film .pic{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--deep),#1b2b2d)}
+.film img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9);transition:transform .7s ease}
+.film:hover img{transform:scale(1.05)}
+.film em{position:absolute;left:14px;bottom:14px;font-style:normal;width:44px;height:44px;display:grid;place-items:center;background:var(--ember);color:var(--void);font-size:.95rem}
+.film .txt{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 16px}
+.film b{font-family:var(--title);font-size:1.12rem;letter-spacing:.03em}
+.film:hover b{color:var(--ember)}
+.film i{order:2;font-style:normal;font-family:var(--script);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);white-space:nowrap}
+.make{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.make div{padding:18px 16px;display:grid;gap:4px;border-right:1px solid var(--edge)}
+.make div:last-child{border-right:0}
+.make b{font-family:var(--title);letter-spacing:.03em}
+.make span{color:var(--dim);font-size:.92rem}
+@media (max-width:640px){.make{grid-template-columns:1fr}.make div{border-right:0;border-bottom:1px solid var(--edge)}.make div:last-child{border-bottom:0}}
+.more{text-align:center;margin-top:30px}
+
+/* Credits */
+.credits{text-align:center}
+.marquee{font-family:var(--title);font-size:clamp(1.05rem,2.6vw,1.5rem);letter-spacing:.06em;line-height:1.9;max-width:900px;margin:0 auto}
+.marquee span{color:var(--ember);margin:0 .5em}
+.marquee b{font-weight:600;white-space:nowrap}
+.credits .note{margin-top:18px;color:var(--dim);font-size:.95rem}
+
+/* End */
+.end{padding-block:clamp(90px,14vw,150px) clamp(60px,8vw,90px);text-align:center}
+.end h2{font-family:var(--title);font-size:clamp(2.2rem,8vw,5rem);line-height:1.02;letter-spacing:.03em}
+.end h2 em{font-style:normal;color:var(--ember)}
+.contact{margin:36px auto 0;max-width:560px;display:grid;gap:10px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--deep);padding:14px 16px;text-align:left}
+.row>div{min-width:0}
+.row .k{font-family:var(--script);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.row .v{font-weight:500;font-size:1.1rem;user-select:all;overflow-wrap:anywhere}
+.socials{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+footer{padding-block:28px;text-align:center;font-family:var(--title);letter-spacing:.35em;font-size:.75rem;color:var(--dim)}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reel img{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="mark" href="#top">ZB</a>
+  <nav aria-label="Sections"><a href="#ai">AI Films</a><a class="opt" href="#story">Story</a><a class="opt" href="#reels">VFX</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+  <section class="hero">
+    <video class="plate" id="bgvid" autoplay muted loop playsinline preload="auto" poster="images/hero-ai-poster.jpg" aria-hidden="true"><source src="videos/hero-ai.mp4" type="video/mp4"></video>
+    <p class="playing">Now playing · <b>The Jester</b> · made with AI</p>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">AI Senior Designer</p>
+        <p class="agency">Saatchi &amp; Saatchi ME <span>Publicis Groupe</span></p>
+        <h1 style="margin-top:22px">Zaheer Bijapure<span>AI Storyteller</span></h1>
+        <p class="role">I direct <b>AI films and campaigns</b> for brands, with ten years of Hollywood VFX behind every frame.</p>
+        <div class="actions"><a class="btn hot" href="#ai">▶ Watch AI films</a><a class="btn" href="#contact">Work with me</a></div>
+      </div>
+      <img class="face" src="images/portrait.jpg" alt="Zaheer Bijapure holding his MPC award">
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Now showing</p><h2 class="h2">AI films</h2><p class="sub">Brand films and ads made with generative AI, directed and finished like VFX.</p></div>
+      <div class="films">
+        <a class="film" href="https://youtu.be/koywWFCnhhg" target="_blank" rel="noopener"><span class="pic"><img src="https://i.ytimg.com/vi/koywWFCnhhg/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><em>▶</em></span><span class="txt"><i>Fashion</i><b>Effortless Elegance</b></span></a>
+        <a class="film" href="https://youtu.be/Ra4tNXg4hSI" target="_blank" rel="noopener"><span class="pic"><img src="https://i.ytimg.com/vi/Ra4tNXg4hSI/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><em>▶</em></span><span class="txt"><i>Food</i><b>Happy Noodles</b></span></a>
+        <a class="film" href="https://youtu.be/P4x1BBZdlyU" target="_blank" rel="noopener"><span class="pic"><img src="https://i.ytimg.com/vi/P4x1BBZdlyU/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><em>▶</em></span><span class="txt"><i>Short film</i><b>AI Film Showcase</b></span></a>
+        <a class="film" href="https://youtu.be/Q1QOJ3eY4Fo" target="_blank" rel="noopener"><span class="pic"><img src="https://i.ytimg.com/vi/Q1QOJ3eY4Fo/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><em>▶</em></span><span class="txt"><i>Travel</i><b>New York to Dubai</b></span></a>
+      </div>
+      <div class="make">
+        <div><b>AI brand films</b><span>Story-led spots for launches and social</span></div>
+        <div><b>AI ad campaigns</b><span>Concepts to finished ads, at agency speed</span></div>
+        <div><b>Key visuals</b><span>Stills and posters, retouched to print</span></div>
+      </div>
+      <p class="more"><a class="btn hot" href="portfolio/ai/">Enter the AI portfolio</a></p>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">The backstory</p><h2 class="h2">From Hollywood to AI</h2><p class="sub">Every AI film I make is built on a decade of placing cameras for the big screen.</p></div>
+      <div class="scenes">
+        <div class="scene"><p class="yr">2025 – Now</p><h3>The Plot Twist</h3><p>AI Senior Designer for global brands, after leading AI VFX.</p><span class="at">Saatchi &amp; Saatchi ME · Publicis Groupe · Studio Blo</span></div>
+        <div class="scene"><p class="yr">2022 – 2025</p><h3>Behind the Camera</h3><p>Senior layout, previz and techviz on <i>The Flash</i> and <i>Kraven</i>.</p><span class="at">MPC</span></div>
+        <div class="scene"><p class="yr">2017 – 2022</p><h3>The Big Screen</h3><p>Body track and layout on <i>Zero</i>, <i>Devotion</i>, <i>The Matrix Resurrections</i>.</p><span class="at">Red Chillies · DNEG</span></div>
+        <div class="scene"><p class="yr">2014 – 2017</p><h3>The Apprentice</h3><p>Animation for TV, ads and <i>Maya the Bee</i>.</p><span class="at">Vertex Volt · Tata Elxsi</span></div>
+      </div>
+      <div class="laurels" aria-label="Awards">
+        <div class="laurel"><svg viewBox="0 0 46 92" aria-hidden="true"><g fill="currentColor"><path d="M40 90C18 80 6 60 8 30" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="24" rx="4" ry="9" transform="rotate(-10 9 24)"/><ellipse cx="6" cy="40" rx="4" ry="9" transform="rotate(-35 6 40)"/><ellipse cx="9" cy="56" rx="4" ry="9" transform="rotate(-55 9 56)"/><ellipse cx="17" cy="70" rx="4" ry="9" transform="rotate(-70 17 70)"/><ellipse cx="28" cy="81" rx="4" ry="9" transform="rotate(-82 28 81)"/></g></svg><div><small>Winner · 2023</small><strong>Spotlight Award</strong><em>MPC</em></div><svg class="r" viewBox="0 0 46 92" aria-hidden="true"><g fill="currentColor"><path d="M40 90C18 80 6 60 8 30" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="24" rx="4" ry="9" transform="rotate(-10 9 24)"/><ellipse cx="6" cy="40" rx="4" ry="9" transform="rotate(-35 6 40)"/><ellipse cx="9" cy="56" rx="4" ry="9" transform="rotate(-55 9 56)"/><ellipse cx="17" cy="70" rx="4" ry="9" transform="rotate(-70 17 70)"/><ellipse cx="28" cy="81" rx="4" ry="9" transform="rotate(-82 28 81)"/></g></svg></div>
+        <div class="laurel"><svg viewBox="0 0 46 92" aria-hidden="true"><g fill="currentColor"><path d="M40 90C18 80 6 60 8 30" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="24" rx="4" ry="9" transform="rotate(-10 9 24)"/><ellipse cx="6" cy="40" rx="4" ry="9" transform="rotate(-35 6 40)"/><ellipse cx="9" cy="56" rx="4" ry="9" transform="rotate(-55 9 56)"/><ellipse cx="17" cy="70" rx="4" ry="9" transform="rotate(-70 17 70)"/><ellipse cx="28" cy="81" rx="4" ry="9" transform="rotate(-82 28 81)"/></g></svg><div><small>Winner · 2023</small><strong>Star Performer</strong><em>MPC</em></div><svg class="r" viewBox="0 0 46 92" aria-hidden="true"><g fill="currentColor"><path d="M40 90C18 80 6 60 8 30" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="9" cy="24" rx="4" ry="9" transform="rotate(-10 9 24)"/><ellipse cx="6" cy="40" rx="4" ry="9" transform="rotate(-35 6 40)"/><ellipse cx="9" cy="56" rx="4" ry="9" transform="rotate(-55 9 56)"/><ellipse cx="17" cy="70" rx="4" ry="9" transform="rotate(-70 17 70)"/><ellipse cx="28" cy="81" rx="4" ry="9" transform="rotate(-82 28 81)"/></g></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reels">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Where the craft began</p><h2 class="h2">VFX showreels</h2></div>
+      <div class="reels">
+        <a class="reel" href="https://vimeo.com/1060745371" target="_blank" rel="noopener"><img src="images/reel-production.jpg" alt="Production layout showreel still"><span><i>▶ Play</i><b>Production Layout</b></span></a>
+        <a class="reel" href="https://vimeo.com/1062331587/1a0097ad99" target="_blank" rel="noopener"><img src="images/reel-cinematic.jpg" alt="Butterfly in a CG flower field"><span><i>▶ Play</i><b>Cinematic Camera</b></span></a>
+        <a class="reel" href="https://vimeo.com/1062328741/dd9829b4a8" target="_blank" rel="noopener"><img src="images/reel-previz.jpg" alt="Previz car on a city street"><span><i>▶ Play</i><b>Previz &amp; Techviz</b></span></a>
+        <a class="reel" href="https://youtu.be/Vqj1RU_uJCk" target="_blank" rel="noopener"><img src="images/reel-tracking.jpg" alt="Camera and body tracking showreel still"><span><i>▶ Play</i><b>Body Tracking</b></span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="credits">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Selected credits</p><h2 class="h2">On the big screen</h2></div>
+      <p class="marquee"><b>The Matrix Resurrections</b> <span>·</span> <b>No Time to Die</b> <span>·</span> <b>Kraven the Hunter</b> <span>·</span> <b>The Flash</b> <span>·</span> <b>Aquaman and the Lost Kingdom</b> <span>·</span> <b>Wonder Woman 1984</b> <span>·</span> <b>Mission: Impossible – Fallout</b> <span>·</span> <b>Pinocchio</b> <span>·</span> <b>Back in Action</b> <span>·</span> <b>Brahmastra</b></p>
+      <p class="note">35+ films and series. <a href="https://www.imdb.com/name/nm12429900/" target="_blank" rel="noopener" style="color:var(--ember)">Full list on IMDb ↗</a></p>
+    </div>
+  </section>
+
+  <section class="end" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Post-credits scene</p>
+      <h2 style="margin-top:16px">Your brand is<br>the <em>next story</em>.</h2>
+      <div class="contact">
+        <div class="row"><div><p class="k">Email</p><p class="v" id="email">zaheerartist@gmail.com</p></div><div style="display:flex;gap:8px"><button class="btn" type="button" data-copy="email">Copy</button><a class="btn hot" href="mailto:zaheerartist@gmail.com">Write</a></div></div>
+        <div class="row"><div><p class="k">Phone</p><p class="v" id="phone">+971 56 756 7948</p></div><button class="btn" type="button" data-copy="phone">Copy</button></div>
+      </div>
+      <div class="socials">
+        <a class="btn" href="https://www.linkedin.com/in/zaheerbijapure/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://www.imdb.com/name/nm12429900/" target="_blank" rel="noopener">IMDb</a>
+        <a class="btn" href="https://www.youtube.com/@zaheerartist" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://www.instagram.com/zaheerartist/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="yr">2026</span> Zaheer Bijapure · UAE</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){var v=document.getElementById('bgvid');if(!v)return;
+  v.muted=true;v.defaultMuted=true;v.playsInline=true;
+  function go(){if(!v.paused)return;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  go();v.addEventListener('canplay',go);
+  ['touchstart','pointerdown','scroll','keydown'].forEach(function(ev){addEventListener(ev,go,{passive:true,once:true});});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)go();});})();
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy);
+    function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)}
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';setTimeout(function(){b.textContent='Copy'},1600)}
+    try{navigator.clipboard.writeText(el.textContent).then(ok,sel)}catch(e){sel()}
+  });
+});
+</script>
+
+</body>
+</html>
