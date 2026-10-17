@@ -10,7 +10,7 @@ Object.keys(window.ZG_DATA.frames).forEach(function(k){var i=new Image();i.src=w
   function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
   var phone=function(){ return innerWidth<700; };
   var returning=store('zg_seen')==='1'; store('zg_seen','1');
-  var pref=store('zg_on'); var on = pref===null ? !phone() : pref==='1';
+  var pref=store('zg_on'); var on = pref===null ? true : pref==='1';
   var SCALE=function(){ return phone()?0.3:0.4; };
   var A={
     stand:{f:['stand'],fps:1,loop:true}, look:{f:['look'],fps:1,loop:true},
